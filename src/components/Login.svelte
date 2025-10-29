@@ -7,10 +7,10 @@
   let error = '';
 
   async function handleLogin() {
-    // Support multiple comma-separated emails
-    const allowedEmails = ALLOWED_EMAILS.split(',').map(e => e.trim().toLowerCase());
-    
-    if (!allowedEmails.includes(email.toLowerCase().trim())) {
+  // ALLOWED_EMAILS is already an array from supabaseClient.js
+  const allowedEmails = ALLOWED_EMAILS.map(e => e.toLowerCase());
+  
+  if (!allowedEmails.includes(email.toLowerCase().trim())) {
       error = 'This app is private. Only allowed emails can sign in.';
       return;
     }
