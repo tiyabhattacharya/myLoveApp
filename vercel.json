@@ -1,6 +1,6 @@
 {
   "functions": {
-    "functions/admin-seed.js": {
+    "api/admin-seed.js": {
       "memory": 1024,
       "maxDuration": 10
     }
