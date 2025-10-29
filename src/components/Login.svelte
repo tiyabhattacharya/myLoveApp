@@ -7,9 +7,12 @@
   let error = '';
 
   async function handleLogin() {
-    if (!ALLOWED_EMAILS.includes(email.toLowerCase().trim())) {
-  error = 'This app is private. Only allowed emails can sign in.';
-  return;
+    // Support multiple comma-separated emails
+    const allowedEmails = ALLOWED_EMAIL.split(',').map(e => e.trim().toLowerCase());
+    
+    if (!allowedEmails.includes(email.toLowerCase().trim())) {
+      error = 'This app is private. Only allowed emails can sign in.';
+      return;
     }
 
     try {
