@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "functions/admin-seed.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/functions/$1"
+    }
+  ]
+}
