@@ -10,5 +10,6 @@ if (!supabaseUrl || !supabaseAnonKey) {
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export const ALLOWED_EMAILS = [
   'tiyab2682@gmail.com',
-  'tiyaabhattacharya@gmail.com'
+  'tiyaabhattacharya@gmail.com',
+  '221b117@juetguna.in'
 ];
